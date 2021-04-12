@@ -1,0 +1,37 @@
+.stove {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 400px;
+  gap: 40px;
+}
+.stove > .holes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.stove > .holes > .hole {
+  width: 200px;
+  height: 200px;
+  background-color: #999;
+  border-radius: 50%;
+  transition: all 1s;
+}
+.stove > .holes > .hole[data-heating='true'] {
+  background-color: #ff2828;
+}
+.stove > .switches {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.stove > .switches > .switch {
+  width: 40px;
+  height: 40px;
+  border-radius: 0 50% 50% 50%;
+  background-color: #999;
+  transition: all 1s;
+}
+.stove > .switches > .switch[data-heating='true'] {
+  transform: rotate(90deg);
+}
